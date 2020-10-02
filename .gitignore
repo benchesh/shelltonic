@@ -1,0 +1,6 @@
+dist/
+node_modules/
+executables/
+*.DS_Store
+**/checkGits-submodules/*
+!.keep

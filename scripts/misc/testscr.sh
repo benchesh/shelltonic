@@ -1,0 +1,2 @@
+here=$PWD
+source ~/.zprofileLoader
