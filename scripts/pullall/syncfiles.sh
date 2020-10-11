@@ -1,19 +1,19 @@
 here=$PWD
-source ~/.zprofileLoader
+source ~/.zxprofileLoader
 
 timenow="$(findAndReplace "$(date -r $(timestamp))" : -)"
 
 echo syncfiles
 
 comparefiles() {
-    cd "$(zprofileConfigDir)sync files"
+    cd "$(zxprofileConfigDir)sync files"
     srcFile="$1"
     destDir="$(dirname "$2")"
     destFile="$(basename "$2")"
 
-    # go back to shellScriptsDir if file does not exist in sync files folder
+    # go back to zxprofileDir if file does not exist in sync files folder
     if [[ ! -f "$srcFile" ]]; then
-        cd "$(shellScriptsDir)"
+        cd "$(zxprofileDir)"
     fi
 
     if [[ -f "$srcFile" ]] && [[ -d "$destDir" ]]; then
@@ -37,17 +37,17 @@ comparefiles() {
 
             if [[ "$destFileCat" != false ]]; then
                 cd ~
-                mkdirGo "zprofile sync backups/$timenow/$destDir"
+                mkdirGo "zxprofile sync backups/$timenow/$destDir"
                 printf "%s" "$destFileCat" >"$destFile"
             fi
 
-            cd "$(zprofileConfigDir)sync files"
+            cd "$(zxprofileConfigDir)sync files"
 
             # #auto commit any changes
             # if [ $(pwdIsInGitRepo) ]; then
-            #     # go back to shellScriptsDir if file does not exist in sync files folder
+            #     # go back to zxprofileDir if file does not exist in sync files folder
             #     if [[ ! -f "$srcFile" ]]; then
-            #         cd "$(shellScriptsDir)"
+            #         cd "$(zxprofileDir)"
             #     fi
 
             #     gpull
@@ -76,7 +76,7 @@ comparefiles() {
 
 while IFS=$',\r' read -r col1 col2 || [ -n "$col1" ]; do
     comparefiles "$col1" ~/"$col2"
-done <"$(zprofileConfigDir)sync files/locations.csv"
+done <"$(zxprofileConfigDir)sync files/locations.csv"
 
 notify Files synced!
 

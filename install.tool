@@ -1,4 +1,4 @@
 cd "$(dirname "$0")"
-sh "$(find . -iname "compileZprofile.sh" -print -quit)"
-source ".zprofileCompiled"
+sh "$(find . -iname "compileZXProfile.sh" -print -quit)"
+source ~/.zxprofileLoader
 endProcess

@@ -1,6 +1,6 @@
 here=$PWD
-source ~/.zprofileLoader
+source ~/.zxprofileLoader
 
-cd "$(zprofileScriptsDir)"
+cd "$zxprofileScriptsDirVar"
 find . -type f -name "*.sh"
 cd "$here"

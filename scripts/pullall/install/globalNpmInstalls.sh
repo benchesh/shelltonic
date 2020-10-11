@@ -1,5 +1,5 @@
 here=$PWD
-source ~/.zprofileLoader
+source ~/.zxprofileLoader
 
 cd ~
 if cmdExists node; then
@@ -8,7 +8,7 @@ if cmdExists node; then
         if [[ $line != "" ]] && [[ $line != *"#"* ]]; then
             globalNpmModules+=($line)
         fi
-    done <"$(zprofileConfigDir)npm-globals.sh"
+    done <"$(zxprofileConfigDir)npm-globals.sh"
 
     outdatedGlobalNpmModules=$(npm outdated -g)
     globallyInstalledNpmModules=$(npm list -g --depth=0)

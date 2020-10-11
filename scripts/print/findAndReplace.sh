@@ -1,5 +1,5 @@
 here=$PWD
-source ~/.zprofileLoader
+source ~/.zxprofileLoader
 
 #escape / and .
 find=$(echo $(echo "$2" | sed -E 's/\//\\\//g') | sed -E 's/\./\\./g')

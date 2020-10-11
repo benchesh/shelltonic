@@ -1,7 +1,7 @@
 here=$PWD
-source ~/.zprofileLoader
+source ~/.zxprofileLoader
 
-cd "$(zprofileConfigDir)"
+cd "$(zxprofileConfigDir)"
 
 if [[ -f "checkGits-prefix.txt" ]]; then
     echo ~/"$(cat "checkGits-prefix.txt")/"

@@ -1,5 +1,5 @@
 here=$PWD
-source ~/.zprofileLoader
+source ~/.zxprofileLoader
 
 #get the git repo url
 config=$(git config --get remote.origin.url)

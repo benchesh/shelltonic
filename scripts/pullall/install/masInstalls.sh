@@ -1,5 +1,5 @@
 here=$PWD
-source ~/.zprofileLoader
+source ~/.zxprofileLoader
 
 if [[ $(isAdmin) == false ]]; then
     echo "mas install skipped!"

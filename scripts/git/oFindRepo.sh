@@ -1,4 +1,4 @@
 here=$PWD
-source ~/.zprofileLoader
+source ~/.zxprofileLoader
 
 open "$(findRepo $1)"

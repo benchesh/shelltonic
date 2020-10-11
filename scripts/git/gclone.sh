@@ -1,5 +1,5 @@
 here=$PWD
-source ~/.zprofileLoader
+source ~/.zxprofileLoader
 
 repo=$(gdirnamefromurl $1)
 echo $repo

@@ -1,4 +1,4 @@
 here=$PWD
-source ~/.zprofileLoader
+source ~/.zxprofileLoader
 
 echo $(owner /usr/local/Cellar)

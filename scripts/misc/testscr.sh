@@ -1,2 +1,2 @@
 here=$PWD
-source ~/.zprofileLoader
+source ~/.zxprofileLoader

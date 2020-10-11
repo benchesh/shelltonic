@@ -1,5 +1,5 @@
 here=$PWD
-source ~/.zprofileLoader
+source ~/.zxprofileLoader
 
 prevBranch=$(git rev-parse --abbrev-ref @{-1})
 

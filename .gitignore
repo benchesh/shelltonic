@@ -4,3 +4,4 @@ executables/
 *.DS_Store
 **/checkGits-submodules/*
 !.keep
+.zxprofileCompiled

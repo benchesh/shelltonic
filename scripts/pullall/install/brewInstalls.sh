@@ -1,10 +1,12 @@
 here=$PWD
-source ~/.zprofileLoader
+source ~/.zxprofileLoader
 
 #install brew stuff
+printlines
+echo "Checking homebrew..."
 
 if [[ $(isAdmin) == false ]]; then
-    echo "homebrew updates skipped!"
+    echo "Homebrew updates skipped!"
 else
     #get homebrew
     if ! cmdExists brew; then

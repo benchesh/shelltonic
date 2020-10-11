@@ -1,5 +1,5 @@
 here=$PWD
-source ~/.zprofileLoader
+source ~/.zxprofileLoader
 
 if [[ "$*" != "" ]]; then
     echo $(stat -f '%A' "$*")

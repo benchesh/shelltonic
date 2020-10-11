@@ -1,5 +1,5 @@
 here=$PWD
-source ~/.zprofileLoader
+source ~/.zxprofileLoader
 
 textSize=50
 bannerOutput=$(banner -w$textSize "$*")

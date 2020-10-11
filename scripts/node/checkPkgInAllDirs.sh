@@ -1,5 +1,5 @@
 here=$PWD
-source ~/.zprofileLoader
+source ~/.zxprofileLoader
 
 if [ $(pwdIsInGitRepo) ]; then
     packages="$(find . -name "package.json" -not -path "*node_modules*" -not -path "*.yalc*")"

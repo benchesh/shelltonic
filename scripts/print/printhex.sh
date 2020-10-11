@@ -1,5 +1,5 @@
 here=$PWD
-source ~/.zprofileLoader
+source ~/.zxprofileLoader
 
 # while read -n 1 byte; do
 #     ord=$(printf "%b" "${byte:-\000}" |

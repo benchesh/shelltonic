@@ -1,5 +1,5 @@
 here=$PWD
-source ~/.zprofileLoader
+source ~/.zxprofileLoader
 
 if [[ $1 == "" ]]; then
     rootdir=$(git rev-parse --git-dir) && rootdir=$(cd "$rootdir" && pwd)/ && rootdir=${rootdir%%/.git/*}"/"
@@ -21,6 +21,6 @@ else
             fi
             exit
         fi
-    done <"$(zprofileConfigDir)checkGits-repos.csv"
+    done <"$(zxprofileConfigDir)checkGits-repos.csv"
     echoError "A repository with the name $1 was not found in checkGits-repos.csv!"
 fi

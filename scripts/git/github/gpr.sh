@@ -1,5 +1,5 @@
 here=$PWD
-source ~/.zprofileLoader
+source ~/.zxprofileLoader
 
 compareUrl=$(gurl)/compare/$(gdefaultbranchname)...$(gbranchname)
 echo $compareUrl

@@ -1,4 +1,4 @@
 here=$PWD
-source ~/.zprofileLoader
+source ~/.zxprofileLoader
 
 echo $(git rev-parse --abbrev-ref HEAD)

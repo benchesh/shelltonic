@@ -1,5 +1,5 @@
 here=$PWD
-source ~/.zprofileLoader
+source ~/.zxprofileLoader
 
-cd "$(shellScriptsDir)"
+cd "$(zxprofileDir)"
 code .

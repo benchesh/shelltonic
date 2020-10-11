@@ -1,4 +1,4 @@
 here=$PWD
-source ~/.zprofileLoader
+source ~/.zxprofileLoader
 
 git status

@@ -1,7 +1,7 @@
 here=$PWD
-source ~/.zprofileLoader
+source ~/.zxprofileLoader
 
-cd "$(zprofileScriptsDir)"
+cd "$zxprofileScriptsDirVar"
 filepath=$(find . -iname "$1.sh" -print -quit)
 
 if [[ "$filepath" != "" ]]; then

@@ -1,5 +1,5 @@
 here=$PWD
-source ~/.zprofileLoader
+source ~/.zxprofileLoader
 
 if [[ $(gbranchname) == "HEAD" ]]; then
     git checkout "$(gprevbranchname)"

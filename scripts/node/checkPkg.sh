@@ -1,5 +1,5 @@
 here=$PWD
-source ~/.zprofileLoader
+source ~/.zxprofileLoader
 
 if [[ -f package.json ]]; then
     if [[ $* == *"nonpm"* ]]; then

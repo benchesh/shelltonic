@@ -1,5 +1,5 @@
 here=$PWD
-source ~/.zprofileLoader
+source ~/.zxprofileLoader
 
 #install vsCodeExtensions
 if [[ $(code -v) == "" ]]; then
@@ -10,7 +10,7 @@ else
         if [[ $line != "" ]] && [[ $line != *"#"* ]]; then
             vsCodeExtensions+=($line)
         fi
-    done <"$(zprofileConfigDir)vscode-extensions.sh"
+    done <"$(zxprofileConfigDir)vscode-extensions.sh"
 
     installedExtensions=$(code --list-extensions)
     for ext in ${vsCodeExtensions[@]}; do

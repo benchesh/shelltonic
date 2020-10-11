@@ -1,7 +1,7 @@
 here=$PWD
-source ~/.zprofileLoader
+source ~/.zxprofileLoader
 
-cd "$(shellScriptsDir)"
+cd "$(zxprofileDir)"
 
 shellScriptsRepo="$(greponame)"
 
@@ -51,7 +51,7 @@ while IFS=$',\r' read -r col1 col2 col3 || [ -n "$col1" ]; do
         domainTest=${col2/*:\/\//}
         domainTest=${domainTest%%\/*}
 
-        if [[ $(curl -Is --connect-timeout 1 https://$domainTest | head -1) != *'HTTP'* ]]; then
+        if [[ $(curl -Is --connect-timeout 3 https://$domainTest | head -1) != *'HTTP'* ]]; then
             echo $repo
             echoError "Connection timed out!"
             continue
@@ -68,10 +68,11 @@ while IFS=$',\r' read -r col1 col2 col3 || [ -n "$col1" ]; do
     totalNoOfRepositoriesChecked=$((totalNoOfRepositoriesChecked + 1))
 
     if [[ ${repo} == $shellScriptsRepo ]]; then
-        compileZprofile
+        compileZXProfile
+        syncfiles
     fi
 
-    cd "$(zprofileConfigDir)"
+    cd "$(zxprofileConfigDir)"
     submodulesFile="checkGits-submodules/$col1/$repo.sh"
 
     if [[ -f "$submodulesFile" ]]; then
@@ -99,7 +100,7 @@ while IFS=$',\r' read -r col1 col2 col3 || [ -n "$col1" ]; do
         printlines
     fi
 
-done <"$(zprofileConfigDir)checkGits-repos.csv"
+done <"$(zxprofileConfigDir)checkGits-repos.csv"
 
 printlines
 

@@ -1,5 +1,5 @@
 here=$PWD
-source ~/.zprofileLoader
+source ~/.zxprofileLoader
 
 SAVEIFS=$IFS                                                                                                                                          # Save current IFS
 IFS=$'\n' read -d '' -r -a arr <<<"$(/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -dump)" # Convert string to array
